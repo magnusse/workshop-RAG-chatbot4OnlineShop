@@ -1,0 +1,26 @@
+[
+  {
+    "id": "P001",
+    "name": "EcoClean X200",
+    "kategorie": "Staubsauger",
+    "beschreibung": "Der EcoClean X200 ist ein leistungsstarker Akku-Staubsauger mit HEPA-Filter. Bis zu 60 Minuten Laufzeit, geeignet für Allergiker.",
+    "kompatibilitaet": ["Ersatzfilter H12", "EcoClean Zubehörkit A"],
+    "preis": "129.00 EUR"
+  },
+  {
+    "id": "P002",
+    "name": "EcoClean Z300",
+    "kategorie": "Staubsauger",
+    "beschreibung": "Beutelloser Staubsauger mit hoher Saugkraft. Perfekt für Haustierbesitzer dank Tierhaar-Turbodüse.",
+    "kompatibilitaet": ["Filter Z-Serie", "Turbodüse Pro"],
+    "preis": "159.00 EUR"
+  },
+  {
+    "id": "P003",
+    "name": "AquaFresh W100",
+    "kategorie": "Wasserkocher",
+    "beschreibung": "Kabelloser Wasserkocher mit 1,7 Liter Fassungsvermögen und automatischer Abschaltung. BPA-frei.",
+    "kompatibilitaet": [],
+    "preis": "39.99 EUR"
+  }
+]
