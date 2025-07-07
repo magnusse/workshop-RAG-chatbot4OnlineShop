@@ -8,12 +8,13 @@ from ragshop.CustomLLM import WPSCustomLLM
 # Einstellungen
 DB_DIR = "../vectorstore/chromadb"
 COLLECTION_NAME = "products"
-EMBEDDING_MODEL_NAME = "all-MiniLM-L6-v2"
-OPENAI_MODEL_NAME = "gpt-3.5-turbo"  # alternativ: "gpt-4"
+EMBEDDING_MODEL_NAME = "all-MiniLM-L12-v2"
+#OPENAI_MODEL_NAME = "gpt-3.5-turbo"  # alternativ: "gpt-4"
 
 def load_vectorstore():
     embeddings = HuggingFaceEmbeddings(model_name=EMBEDDING_MODEL_NAME)
     db = Chroma(persist_directory=DB_DIR, embedding_function=embeddings, collection_name=COLLECTION_NAME)
+#    print(db._collection.count())
     return db
 
 def build_qa_chain(db):

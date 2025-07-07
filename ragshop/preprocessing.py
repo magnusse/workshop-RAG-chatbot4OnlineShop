@@ -30,7 +30,7 @@ def chunk_products(products):
     return chunks
 
 # 3. Vektordatenbank mit Chroma initialisieren
-def setup_chroma(chunks, db_dir, embedding_model_name="all-MiniLM-L6-v2", collection_name="products"):
+def setup_chroma(chunks, db_dir, embedding_model_name="all-MiniLM-L12-v2", collection_name="products"):
     texts = [chunk["text"] for chunk in chunks]
     metadatas = [chunk["metadata"] for chunk in chunks]
     ids = [chunk["id"] for chunk in chunks]
@@ -38,6 +38,7 @@ def setup_chroma(chunks, db_dir, embedding_model_name="all-MiniLM-L6-v2", collec
     embeddings = HuggingFaceEmbeddings(model_name=embedding_model_name)
     db = Chroma.from_texts(texts=texts, embedding=embeddings, metadatas=metadatas, ids=ids, persist_directory=db_dir, collection_name=collection_name)
     db.persist()
+    print(db._collection.count())
     return db
 
 # Hauptfunktion
