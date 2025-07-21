@@ -22,5 +22,141 @@
     "beschreibung": "Kabelloser Wasserkocher mit 1,7 Liter Fassungsvermögen und automatischer Abschaltung. BPA-frei.",
     "kompatibilitaet": [],
     "preis": "39.99 EUR"
+  },
+  {
+    "id": "P004",
+    "name": "AquaFresh W200",
+    "kategorie": "Wasserkocher",
+    "beschreibung": "Wasserkocher aus Edelstahl mit Temperatureinstellung (60–100 °C) und Warmhaltefunktion.",
+    "kompatibilitaet": [],
+    "preis": "54.99 EUR"
+  },
+  {
+    "id": "P005",
+    "name": "PowerMix B100",
+    "kategorie": "Mixer",
+    "beschreibung": "Kompakter Standmixer mit 800 Watt Leistung und 1,5 Liter Glasbehälter. Ideal für Smoothies.",
+    "kompatibilitaet": ["Ersatzbehälter B-Serie"],
+    "preis": "49.99 EUR"
+  },
+  {
+    "id": "P006",
+    "name": "PowerMix B200 Pro",
+    "kategorie": "Mixer",
+    "beschreibung": "Hochleistungsmixer mit 1200 Watt, 6 Edelstahlklingen und automatischer Reinigungsfunktion.",
+    "kompatibilitaet": ["PowerMix Deckelset", "Behälter XL"],
+    "preis": "89.00 EUR"
+  },
+  {
+    "id": "P007",
+    "name": "FreshAir P300",
+    "kategorie": "Luftreiniger",
+    "beschreibung": "Luftreiniger mit dreifach Filtersystem (HEPA, Aktivkohle, Vorfilter). Bis 40 m² Raumgröße.",
+    "kompatibilitaet": ["HEPA Filter P-Serie"],
+    "preis": "149.00 EUR"
+  },
+  {
+    "id": "P008",
+    "name": "FreshAir Mini P100",
+    "kategorie": "Luftreiniger",
+    "beschreibung": "Tragbarer Luftreiniger für kleine Räume oder Reisen. USB-Anschluss, flüsterleise im Betrieb.",
+    "kompatibilitaet": [],
+    "preis": "59.99 EUR"
+  },
+  {
+    "id": "P009",
+    "name": "CookMaster M400",
+    "kategorie": "Mikrowelle",
+    "beschreibung": "Kompakte Mikrowelle mit Grillfunktion, 20 Liter Garraum und 800 Watt Leistung.",
+    "kompatibilitaet": [],
+    "preis": "119.00 EUR"
+  },
+  {
+    "id": "P010",
+    "name": "CookMaster M500 Plus",
+    "kategorie": "Mikrowelle",
+    "beschreibung": "Digitale Mikrowelle mit Auftaufunktion, Kindersicherung und LED-Display.",
+    "kompatibilitaet": [],
+    "preis": "139.00 EUR"
+  },
+  {
+    "id": "P011",
+    "name": "SteamPro D100",
+    "kategorie": "Dampfbügeleisen",
+    "beschreibung": "Leichtes Dampfbügeleisen mit Anti-Kalk-System und 2400 Watt Leistung.",
+    "kompatibilitaet": ["Entkalker D-Serie"],
+    "preis": "44.99 EUR"
+  },
+  {
+    "id": "P012",
+    "name": "SteamPro Station S300",
+    "kategorie": "Dampfbügelstation",
+    "beschreibung": "Leistungsstarke Bügelstation mit 1,5 Liter Tank und kontinuierlichem Dampfstoß.",
+    "kompatibilitaet": ["Wassertank S-Serie", "Entkalker S300"],
+    "preis": "159.00 EUR"
+  },
+  {
+    "id": "P013",
+    "name": "CoolBreeze V200",
+    "kategorie": "Ventilator",
+    "beschreibung": "Tischventilator mit 3 Geschwindigkeitsstufen und Schwenkfunktion. Leiser Betrieb.",
+    "kompatibilitaet": [],
+    "preis": "29.99 EUR"
+  },
+  {
+    "id": "P014",
+    "name": "CoolBreeze Tower T400",
+    "kategorie": "Ventilator",
+    "beschreibung": "Turmventilator mit Fernbedienung, Timer und LED-Anzeige.",
+    "kompatibilitaet": ["Fernbedienung T-Serie"],
+    "preis": "79.99 EUR"
+  },
+  {
+    "id": "P015",
+    "name": "CleanShine R500",
+    "kategorie": "Fensterreiniger",
+    "beschreibung": "Akku-Fenstersauger für streifenfreies Reinigen. Bis zu 30 Minuten Laufzeit.",
+    "kompatibilitaet": ["Ersatzlippe R-Serie"],
+    "preis": "59.00 EUR"
+  },
+  {
+    "id": "P016",
+    "name": "PureSteam H100",
+    "kategorie": "Dampfreiniger",
+    "beschreibung": "Handlicher Dampfreiniger mit 3 Bar Dampfdruck, ideal für Bad und Küche.",
+    "kompatibilitaet": ["Düsenaufsatz H-Serie"],
+    "preis": "69.00 EUR"
+  },
+  {
+    "id": "P017",
+    "name": "PureSteam Floor F300",
+    "kategorie": "Dampfreiniger",
+    "beschreibung": "Dampfmopp für Hartböden mit Teleskopgriff und Mikrofaserpads.",
+    "kompatibilitaet": ["Mikrofaserpads F-Serie"],
+    "preis": "89.00 EUR"
+  },
+  {
+    "id": "P018",
+    "name": "SmartScale S100",
+    "kategorie": "Küchenwaage",
+    "beschreibung": "Digitale Küchenwaage mit Tara-Funktion und LCD-Anzeige. Bis 5 kg.",
+    "kompatibilitaet": [],
+    "preis": "19.99 EUR"
+  },
+  {
+    "id": "P019",
+    "name": "SmartBin T500",
+    "kategorie": "Mülleimer",
+    "beschreibung": "Sensor-Mülleimer mit automatischer Deckelöffnung und 30 Liter Volumen.",
+    "kompatibilitaet": ["Müllbeutel T-Serie"],
+    "preis": "69.99 EUR"
+  },
+  {
+    "id": "P020",
+    "name": "FreshToast T100",
+    "kategorie": "Toaster",
+    "beschreibung": "2-Scheiben-Toaster mit Brötchenaufsatz und einstellbarem Bräunungsgrad.",
+    "kompatibilitaet": [],
+    "preis": "34.99 EUR"
   }
 ]

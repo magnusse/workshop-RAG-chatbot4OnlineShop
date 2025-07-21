@@ -1,3 +1,5 @@
+import json
+
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain.vectorstores import Chroma
 from langchain.chains import RetrievalQA
@@ -38,8 +40,11 @@ def chat():
         if query.lower() in ("exit", "quit"):
             break
         result = qa_chain({"query": query})
+        print(result)
+        parsed_result = json.loads(result["result"])
         print("\nAntwort:")
-        print(result["result"])
+        print(parsed_result['choices'][0]['message']['content'])
+#        print(result["result"]['choices'][0]['message']['content'])
         print("\n---\n")
 
 if __name__ == "__main__":
