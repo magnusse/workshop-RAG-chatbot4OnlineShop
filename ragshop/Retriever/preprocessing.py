@@ -1,14 +1,14 @@
 import json
 
-#from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_huggingface import HuggingFaceEmbeddings
-from langchain_community.vectorstores import Chroma
-
+from chromadb.utils import embedding_functions
+from chromadb import PersistentClient
 
 
 # Pfade
-DATA_PATH = "../data/raw/products.json"
-DB_DIR = "../vectorstore/chromadb"
+DATA_PATH = "../../data/raw/products.json"
+DB_DIR = "../../vectorstore/chromadb"
+COLLECTION_NAME = "products"
+EMBEDDING_MODEL_NAME = "all-MiniLM-L12-v2"
 
 # 1. Daten laden
 def load_products(filepath):
@@ -30,16 +30,31 @@ def chunk_products(products):
     return chunks
 
 # 3. Vektordatenbank mit Chroma initialisieren
-def setup_chroma(chunks, db_dir, embedding_model_name="all-MiniLM-L12-v2", collection_name="products"):
+def setup_chroma(chunks, db_dir, embedding_model_name=EMBEDDING_MODEL_NAME, collection_name="products"):
     texts = [chunk["text"] for chunk in chunks]
     metadatas = [chunk["metadata"] for chunk in chunks]
     ids = [chunk["id"] for chunk in chunks]
 
-    embeddings = HuggingFaceEmbeddings(model_name=embedding_model_name)
-    db = Chroma.from_texts(texts=texts, embedding=embeddings, metadatas=metadatas, ids=ids, persist_directory=db_dir, collection_name=collection_name)
-    db.persist()
-    print(db._collection.count())
-    return db
+    client = PersistentClient(path=db_dir)
+
+    embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=embedding_model_name)
+
+    # Bestehende oder neue Collection
+    collection = client.get_or_create_collection(name=COLLECTION_NAME, embedding_function=embedding_fn)
+
+    # Daten hinzufügen
+    collection.add(
+        documents=texts,
+        ids=ids,
+        metadatas=metadatas
+    )
+
+    # Persistieren
+    #client.persist()
+
+    # Anzahl Einträge prüfen
+    print("Einträge in der Collection:", len(collection.get()["ids"]))
+    return collection
 
 # Hauptfunktion
 def main():
