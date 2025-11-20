@@ -4,13 +4,35 @@ import os
 #from ragshop.Retriever import retriever
 from ragshop.Chatbot.CustomLLM import WPSCustomLLM
 from ragshop.Retriever.retriever import productretriever
+from ragshop.Retriever.retriever import mock_productretriever
 #from ragshop.Retriever.retriever import load_vectorstore
+from abc import ABC, abstractmethod
 
+class ISalesConsultant(ABC):
 
-class salesconsultant:
+    @abstractmethod
+    def ask_qa_chain(self, prompt: str) -> str:
+        """Stellt eine Frage und liefert die Antwort des LLM zurück."""
+        pass
+
+#Implementierung als Mock
+class mock_salesconsultant(ISalesConsultant):
 
     def __init__(self):
-        self.retriever = productretriever()
+        self.test = "www"
+
+    def ask_qa_chain(self,prompt):
+        result = "Great Question! We will be happy to answer your question personllay. Please call +49 0123 4567890"
+        return result
+
+
+#
+# Die Implementierung mit einem LLM
+#
+class salesconsultant(ISalesConsultant):
+
+    def __init__(self):
+        self.retriever = mock_productretriever()
         # TODO: Dies nur einmal setzen und von außen verfügbar machen
         token = os.getenv("WEBUI_API_KEY")
         self.llm = WPSCustomLLM(api_key=token)
@@ -25,7 +47,10 @@ class salesconsultant:
         print("LLM-Prompt = \n"+llm_prompt)
         result = self.llm.call(llm_prompt)
 
-        return result
+        response = json.loads(result) if isinstance(result, str) else result
+        answer = response["choices"][0]["message"]["content"]
+
+        return answer
 
 #-------------------------------------------
 
