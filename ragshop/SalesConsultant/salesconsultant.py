@@ -3,8 +3,8 @@ import os
 
 #from ragshop.Retriever import retriever
 from ragshop.Chatbot.CustomLLM import WPSCustomLLM
-from ragshop.Retriever.retriever import productretriever
-from ragshop.Retriever.retriever import mock_productretriever
+from ragshop.Retriever.retriever import IProductRetriever
+
 #from ragshop.Retriever.retriever import load_vectorstore
 from abc import ABC, abstractmethod
 
@@ -18,7 +18,7 @@ class ISalesConsultant(ABC):
 #Implementierung als Mock
 class mock_salesconsultant(ISalesConsultant):
 
-    def __init__(self):
+    def __init__(self, retriever:IProductRetriever):
         self.test = "www"
 
     def ask_qa_chain(self,prompt):
@@ -31,8 +31,8 @@ class mock_salesconsultant(ISalesConsultant):
 #
 class salesconsultant(ISalesConsultant):
 
-    def __init__(self):
-        self.retriever = mock_productretriever()
+    def __init__(self, retriever:IProductRetriever):
+        self.retriever = retriever
         # TODO: Dies nur einmal setzen und von außen verfügbar machen
         token = os.getenv("WEBUI_API_KEY")
         self.llm = WPSCustomLLM(api_key=token)
