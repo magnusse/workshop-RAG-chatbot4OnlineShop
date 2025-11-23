@@ -2,161 +2,209 @@
   {
     "id": "P001",
     "name": "EcoClean X200",
-    "kategorie": "Staubsauger",
-    "beschreibung": "Der EcoClean X200 ist ein leistungsstarker Akku-Staubsauger mit HEPA-Filter. Bis zu 60 Minuten Laufzeit, geeignet für Allergiker.",
-    "kompatibilitaet": ["Ersatzfilter H12", "EcoClean Zubehörkit A"],
-    "preis": "129.00 EUR"
+    "category": "Vacuum Cleaner",
+    "description": "The EcoClean X200 is a high-performance cordless vacuum cleaner equipped with an advanced HEPA filtration system designed to capture even the smallest airborne particles. Its powerful battery provides up to 60 minutes of uninterrupted cleaning, making it ideal for everyday household use as well as more demanding tasks. Thanks to its lightweight design and flexible attachments, it is exceptionally easy to maneuver, allowing users to clean floors, upholstery, and hard-to-reach corners with minimal effort. The device is particularly suitable for allergy sufferers, as it significantly improves indoor air quality while maintaining consistently strong suction power.",
+    "compatibility": [
+      "Replacement Filter H12",
+      "EcoClean Accessory Kit A"
+    ],
+    "price": "129.00 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P002",
     "name": "EcoClean Z300",
-    "kategorie": "Staubsauger",
-    "beschreibung": "Beutelloser Staubsauger mit hoher Saugkraft. Perfekt für Haustierbesitzer dank Tierhaar-Turbodüse.",
-    "kompatibilitaet": ["Filter Z-Serie", "Turbodüse Pro"],
-    "preis": "159.00 EUR"
+    "category": "Vacuum Cleaner",
+    "description": "The EcoClean Z300 is a bagless vacuum cleaner engineered for maximum suction efficiency, ensuring excellent cleaning results on carpets, hard floors, and upholstered surfaces. Its special pet hair turbo brush makes it particularly effective for households with animals, as it removes embedded hair and dust with ease. The dust container is easy to empty and clean, eliminating the need for replacement bags and reducing long-term maintenance costs. Combined with its multi-stage filtration system and ergonomic design, the Z300 offers a reliable solution for users who expect both power and convenience in their cleaning routine.",
+    "compatibility": [
+      "Z-Series Filter",
+      "Turbo Brush Pro"
+    ],
+    "price": "159.00 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P003",
     "name": "AquaFresh W100",
-    "kategorie": "Wasserkocher",
-    "beschreibung": "Kabelloser Wasserkocher mit 1,7 Liter Fassungsvermögen und automatischer Abschaltung. BPA-frei.",
-    "kompatibilitaet": [],
-    "preis": "39.99 EUR"
+    "category": "Kettle",
+    "description": "The AquaFresh W100 is a modern cordless kettle designed for everyday kitchen use, featuring a generous 1.7-liter capacity that makes it suitable for families, offices, or frequent tea and coffee preparation. Its automatic shut-off system provides an additional layer of safety, preventing overheating and reducing energy consumption. Constructed from BPA-free materials, the kettle ensures safe and clean drinking water while maintaining durability and ease of use. Its 360-degree base and quick-boil heating element further enhance the user experience, offering both versatility and convenience.",
+    "compatibility": [],
+    "price": "39.99 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P004",
     "name": "AquaFresh W200",
-    "kategorie": "Wasserkocher",
-    "beschreibung": "Wasserkocher aus Edelstahl mit Temperatureinstellung (60–100 °C) und Warmhaltefunktion.",
-    "kompatibilitaet": [],
-    "preis": "54.99 EUR"
+    "category": "Kettle",
+    "description": "The AquaFresh W200 is an elegant stainless steel kettle equipped with adjustable temperature settings ranging from 60 to 100 \u00b0C, allowing users to prepare beverages such as green tea, herbal infusions, and coffee at their optimal brewing temperatures. Its integrated keep-warm function maintains the selected temperature for extended periods, ensuring hot water is always ready when needed. The robust stainless steel body enhances durability while offering a clean and modern aesthetic. Designed for comfort and efficiency, the W200 provides a refined boiling experience for users with diverse preferences.",
+    "compatibility": [],
+    "price": "54.99 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P005",
     "name": "PowerMix B100",
-    "kategorie": "Mixer",
-    "beschreibung": "Kompakter Standmixer mit 800 Watt Leistung und 1,5 Liter Glasbehälter. Ideal für Smoothies.",
-    "kompatibilitaet": ["Ersatzbehälter B-Serie"],
-    "preis": "49.99 EUR"
+    "category": "Blender",
+    "description": "The PowerMix B100 is a compact and versatile countertop blender that combines an 800-watt motor with a durable 1.5-liter glass container, making it ideal for preparing smoothies, sauces, soups, and frozen drinks. The sturdy glass jar resists staining and odor retention, ensuring long-lasting clarity and hygiene. Its intuitive control interface allows users to create finely blended textures with minimal effort. Whether used for daily smoothie preparation or occasional cooking projects, the B100 offers a balanced mix of power, reliability, and ease of use.",
+    "compatibility": [
+      "B-Series Replacement Jar"
+    ],
+    "price": "49.99 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P006",
     "name": "PowerMix B200 Pro",
-    "kategorie": "Mixer",
-    "beschreibung": "Hochleistungsmixer mit 1200 Watt, 6 Edelstahlklingen und automatischer Reinigungsfunktion.",
-    "kompatibilitaet": ["PowerMix Deckelset", "Behälter XL"],
-    "preis": "89.00 EUR"
+    "category": "Blender",
+    "description": "The PowerMix B200 Pro is engineered for demanding kitchen tasks, featuring a powerful 1200-watt motor and six precision-crafted stainless steel blades that deliver exceptional blending performance. From crushing ice to blending dense ingredients like nuts or frozen fruits, the appliance ensures consistently smooth results. Its automatic cleaning mode streamlines maintenance, allowing users to effortlessly rinse and clean the device after use. Built for both home cooks and culinary enthusiasts, the B200 Pro combines advanced technology with durable construction to support a wide range of food preparation needs.",
+    "compatibility": [
+      "PowerMix Lid Set",
+      "XL Container"
+    ],
+    "price": "89.00 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P007",
     "name": "FreshAir P300",
-    "kategorie": "Luftreiniger",
-    "beschreibung": "Luftreiniger mit dreifach Filtersystem (HEPA, Aktivkohle, Vorfilter). Bis 40 m² Raumgröße.",
-    "kompatibilitaet": ["HEPA Filter P-Serie"],
-    "preis": "149.00 EUR"
+    "category": "Air Purifier",
+    "description": "The FreshAir P300 is a high-efficiency air purifier featuring a triple-layer filtration system composed of a HEPA filter, activated carbon filter, and pre-filter. This combination effectively removes dust, pollen, odors, and harmful particles from the air, making it ideal for rooms up to 40 m\u00b2. Its quiet operation ensures minimal disturbance during sleep, work, or relaxation, while the integrated air quality indicators provide constant feedback on indoor air conditions. Designed to improve overall well-being, the P300 delivers cleaner and healthier air for a wide range of environments.",
+    "compatibility": [
+      "P-Series HEPA Filter"
+    ],
+    "price": "149.00 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P008",
     "name": "FreshAir Mini P100",
-    "kategorie": "Luftreiniger",
-    "beschreibung": "Tragbarer Luftreiniger für kleine Räume oder Reisen. USB-Anschluss, flüsterleise im Betrieb.",
-    "kompatibilitaet": [],
-    "preis": "59.99 EUR"
+    "category": "Air Purifier",
+    "description": "The FreshAir Mini P100 is a compact and portable air purifier tailored for small rooms, offices, and travel use. Its whisper-quiet performance makes it suitable for nighttime operation, while the USB power connection offers flexibility for use with power banks, laptops, or car adapters. Despite its small size, the P100 effectively reduces airborne contaminants and helps create a more comfortable breathing environment. Its minimalist design and low maintenance requirements make it a convenient companion for users on the go.",
+    "compatibility": [],
+    "price": "59.99 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P009",
     "name": "CookMaster M400",
-    "kategorie": "Mikrowelle",
-    "beschreibung": "Kompakte Mikrowelle mit Grillfunktion, 20 Liter Garraum und 800 Watt Leistung.",
-    "kompatibilitaet": [],
-    "preis": "119.00 EUR"
+    "category": "Microwave",
+    "description": "The CookMaster M400 is a compact microwave oven equipped with an integrated grill function, offering versatility for reheating, cooking, and browning food. Its 20-liter interior provides sufficient space for everyday dishes while maintaining a small footprint suitable for kitchens of any size. With an 800-watt output, the M400 ensures even heating and reliable performance. Its user-friendly controls make it easy to operate, allowing users to prepare a wide variety of meals quickly and efficiently.",
+    "compatibility": [],
+    "price": "119.00 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P010",
     "name": "CookMaster M500 Plus",
-    "kategorie": "Mikrowelle",
-    "beschreibung": "Digitale Mikrowelle mit Auftaufunktion, Kindersicherung und LED-Display.",
-    "kompatibilitaet": [],
-    "preis": "139.00 EUR"
+    "category": "Microwave",
+    "description": "The CookMaster M500 Plus is a digital microwave featuring a precise defrosting function, a convenient child safety lock, and a bright LED display for easy operation. Its modern control interface allows users to select tailored cooking programs and adjust settings quickly. The appliance offers consistent heating results, making it suitable for everyday kitchen tasks such as reheating leftovers, cooking vegetables, and preparing ready-made meals. Its modern design and thoughtful safety features make it a reliable addition to any household.",
+    "compatibility": [],
+    "price": "139.00 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P011",
     "name": "SteamPro D100",
-    "kategorie": "Dampfbügeleisen",
-    "beschreibung": "Leichtes Dampfbügeleisen mit Anti-Kalk-System und 2400 Watt Leistung.",
-    "kompatibilitaet": ["Entkalker D-Serie"],
-    "preis": "44.99 EUR"
+    "category": "Steam Iron",
+    "description": "The SteamPro D100 is an exceptionally lightweight and easy-to-handle steam iron designed to deliver smooth and precise ironing results. With its integrated anti-scale system, the device maintains long-lasting performance by reducing mineral buildup. The powerful 2400-watt heating element ensures rapid heat-up times and consistent steam output, enabling efficient wrinkle removal on a wide range of fabrics. Ideal for both quick touch-ups and more extensive ironing sessions, the D100 offers a reliable and comfortable ironing experience.",
+    "compatibility": [
+      "D-Series Descaler"
+    ],
+    "price": "44.99 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P012",
     "name": "SteamPro Station S300",
-    "kategorie": "Dampfbügelstation",
-    "beschreibung": "Leistungsstarke Bügelstation mit 1,5 Liter Tank und kontinuierlichem Dampfstoß.",
-    "kompatibilitaet": ["Wassertank S-Serie", "Entkalker S300"],
-    "preis": "159.00 EUR"
+    "category": "Steam Station",
+    "description": "The SteamPro Station S300 is a high-performance ironing system featuring a generous 1.5-liter water tank and a continuous steam output that ensures rapid and effective wrinkle removal. Designed for users who require consistent results on larger volumes of laundry, the station offers smooth gliding, high steam pressure, and an ergonomic iron for extended comfort. Its advanced heating technology ensures fast readiness, while the stable base unit provides enhanced safety during use. The S300 is ideal for demanding home users or semi-professional ironing environments.",
+    "compatibility": [
+      "S-Series Water Tank",
+      "S300 Descaler"
+    ],
+    "price": "159.00 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P013",
     "name": "CoolBreeze V200",
-    "kategorie": "Ventilator",
-    "beschreibung": "Tischventilator mit 3 Geschwindigkeitsstufen und Schwenkfunktion. Leiser Betrieb.",
-    "kompatibilitaet": [],
-    "preis": "29.99 EUR"
+    "category": "Fan",
+    "description": "The CoolBreeze V200 is a compact table fan designed to deliver efficient and refreshing airflow across different room sizes. Equipped with three adjustable speed settings and an oscillation mode, it distributes air evenly and enhances comfort during warm weather. Its quiet motor ensures minimal noise, making it suitable for workspaces, bedrooms, or study areas. The fan\u2019s lightweight construction and stable base make it both practical and easy to reposition when needed.",
+    "compatibility": [],
+    "price": "29.99 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P014",
     "name": "CoolBreeze Tower T400",
-    "kategorie": "Ventilator",
-    "beschreibung": "Turmventilator mit Fernbedienung, Timer und LED-Anzeige.",
-    "kompatibilitaet": ["Fernbedienung T-Serie"],
-    "preis": "79.99 EUR"
+    "category": "Fan",
+    "description": "The CoolBreeze Tower T400 is a modern tower fan offering a powerful yet quiet airflow performance. It comes equipped with a remote control, a programmable timer, and a clear LED display that simplifies operation. Its tall and slim design allows it to fit into narrow spaces while still delivering wide-angle air circulation. Ideal for homes and offices, the T400 provides customizable comfort during hot seasons and enhances indoor air movement throughout the day.",
+    "compatibility": [
+      "T-Series Remote Control"
+    ],
+    "price": "79.99 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P015",
     "name": "CleanShine R500",
-    "kategorie": "Fensterreiniger",
-    "beschreibung": "Akku-Fenstersauger für streifenfreies Reinigen. Bis zu 30 Minuten Laufzeit.",
-    "kompatibilitaet": ["Ersatzlippe R-Serie"],
-    "preis": "59.00 EUR"
+    "category": "Window Cleaner",
+    "description": "The CleanShine R500 is a cordless window vacuum engineered for streak-free cleaning of windows, tiles, and glass surfaces. With a runtime of up to 30 minutes, it offers enough capacity for multiple cleaning tasks around the home. Its ergonomic design and lightweight structure reduce fatigue during use, while the efficient suction system prevents dripping and ensures spotless results. Whether used for routine maintenance or deep cleaning, the R500 provides an easy and effective solution for achieving clear and polished surfaces.",
+    "compatibility": [
+      "R-Series Replacement Blade"
+    ],
+    "price": "59.00 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P016",
     "name": "PureSteam H100",
-    "kategorie": "Dampfreiniger",
-    "beschreibung": "Handlicher Dampfreiniger mit 3 Bar Dampfdruck, ideal für Bad und Küche.",
-    "kompatibilitaet": ["Düsenaufsatz H-Serie"],
-    "preis": "69.00 EUR"
+    "category": "Steam Cleaner",
+    "description": "The PureSteam H100 is a compact handheld steam cleaner offering powerful steam output at 3 bar pressure, making it ideal for sanitizing kitchens, bathrooms, and household surfaces. It effectively loosens dirt, grease, and grime without the need for chemical cleaners. The H100 heats quickly and features interchangeable nozzle attachments that allow users to adapt the device to different cleaning scenarios. Its lightweight and ergonomic design make it practical for frequent use and easy to store.",
+    "compatibility": [
+      "H-Series Nozzle Attachment"
+    ],
+    "price": "69.00 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P017",
     "name": "PureSteam Floor F300",
-    "kategorie": "Dampfreiniger",
-    "beschreibung": "Dampfmopp für Hartböden mit Teleskopgriff und Mikrofaserpads.",
-    "kompatibilitaet": ["Mikrofaserpads F-Serie"],
-    "preis": "89.00 EUR"
+    "category": "Steam Cleaner",
+    "description": "The PureSteam Floor F300 is a highly effective steam mop designed for deep cleaning and sanitizing hard floors such as tile, laminate, and hardwood. Its telescopic handle ensures comfortable operation for users of various heights, while the included microfiber pads capture dirt and debris with ease. The device produces continuous steam, which helps lift stubborn stains and eliminate bacteria without chemical cleaners. With its wide cleaning head and smooth gliding action, the F300 is ideal for maintaining spotless and hygienic floors.",
+    "compatibility": [
+      "F-Series Microfiber Pads"
+    ],
+    "price": "89.00 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P018",
     "name": "SmartScale S100",
-    "kategorie": "Küchenwaage",
-    "beschreibung": "Digitale Küchenwaage mit Tara-Funktion und LCD-Anzeige. Bis 5 kg.",
-    "kompatibilitaet": [],
-    "preis": "19.99 EUR"
+    "category": "Kitchen Scale",
+    "description": "The SmartScale S100 is a precise digital kitchen scale designed for everyday cooking and baking. With a maximum load of up to 5 kg, it accommodates a wide variety of ingredients, from small quantities of spices to larger batches of dough. Its intuitive tare function allows users to measure ingredients in sequence without manually recalculating weights. The easy-to-read LCD display and compact construction make the S100 a practical tool for both novice and experienced cooks.",
+    "compatibility": [],
+    "price": "19.99 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P019",
     "name": "SmartBin T500",
-    "kategorie": "Mülleimer",
-    "beschreibung": "Sensor-Mülleimer mit automatischer Deckelöffnung und 30 Liter Volumen.",
-    "kompatibilitaet": ["Müllbeutel T-Serie"],
-    "preis": "69.99 EUR"
+    "category": "Trash Bin",
+    "description": "The SmartBin T500 is a modern sensor-activated trash bin that opens automatically when motion is detected, providing a hygienic and hands-free waste disposal experience. With a large 30-liter capacity, it is well-suited for kitchens, offices, and family households. The durable housing is designed for easy cleaning, while the quiet opening mechanism enhances daily convenience. Its sleek design integrates seamlessly into modern interiors, offering both practicality and aesthetic appeal.",
+    "compatibility": [
+      "T-Series Trash Bags"
+    ],
+    "price": "69.99 EUR",
+    "source": "Manufacturer"
   },
   {
     "id": "P020",
     "name": "FreshToast T100",
-    "kategorie": "Toaster",
-    "beschreibung": "2-Scheiben-Toaster mit Brötchenaufsatz und einstellbarem Bräunungsgrad.",
-    "kompatibilitaet": [],
-    "preis": "34.99 EUR"
+    "category": "Toaster",
+    "description": "The FreshToast T100 is a versatile 2-slice toaster equipped with adjustable browning levels, allowing users to prepare toast exactly to their preference. The included bun rack provides additional flexibility for heating rolls, croissants, or pastries. Its even-heating elements ensure consistent results, while the removable crumb tray simplifies cleaning after each use. With its compact footprint and reliable performance, the T100 is a practical addition to any kitchen.",
+    "compatibility": [],
+    "price": "34.99 EUR",
+    "source": "Manufacturer"
   }
 ]
