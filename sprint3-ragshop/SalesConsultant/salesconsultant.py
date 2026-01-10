@@ -33,8 +33,8 @@ class salesconsultant(ISalesConsultant):
 
     def __init__(self, retriever:IProductRetriever):
         self.retriever = retriever
-        # TODO: Dies nur einmal setzen und von außen verfügbar machen
         token = os.getenv("WEBUI_API_KEY")
+        # TODO Integrate Abstraction
         self.llm = WPSCustomLLM(api_key=token)
 
     def ask_qa_chain(self,prompt):

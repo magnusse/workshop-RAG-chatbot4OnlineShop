@@ -33,8 +33,8 @@ class salesconsultant(ISalesConsultant):
 
     def __init__(self, retriever:IProductRetriever):
         self.retriever = retriever
-        # TODO: Dies nur einmal setzen und von außen verfügbar machen
         token = os.getenv("WEBUI_API_KEY")
+        # TODO Integrate Abstraction
         self.llm = WPSCustomLLM(api_key=token)
 
     def ask_qa_chain(self,prompt):
@@ -55,7 +55,7 @@ class salesconsultant(ISalesConsultant):
 #-------------------------------------------
 
 def chat():
-    print("🛍️ Willkommen beim Produkt-Chatbot. Stelle deine Frage oder tippe 'exit':\n")
+    print("🛍️ Welcome to the sales consultant. For exit type 'exit':\n")
     # collection = load_vectorstore()
     myChatbot = salesconsultant()
 
@@ -74,7 +74,7 @@ def chat():
 
 if __name__ == "__main__":
     if not os.getenv("WEBUI_API_KEY"):
-        print("❌ Bitte setze die Umgebungsvariable WEBUI_API_KEY.")
+        print("❌ Please set environment WEBUI_API_KEY.")
     else:
         token = os.getenv("WEBUI_API_KEY")
         chat()

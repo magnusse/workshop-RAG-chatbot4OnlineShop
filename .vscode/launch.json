@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": ""ragshop: Preprocessing"",
+            "type": "python",
+            "request": "launch",
+            "module": "ragshop.Retriever.preprocessing",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "ragshop: UseInterface",
+            "type": "python",
+            "request": "launch",
+            "module": "ragshop.SalesConsultant.UseInterface",
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+}

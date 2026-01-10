@@ -6,7 +6,7 @@ from ragshop.Retriever.preprocessing import EMBEDDING_MODEL_NAME
 from abc import ABC, abstractmethod
 
 # Einstellungen
-DB_DIR = "../vectorstore/chromadb"
+DB_DIR = "vectorstore/chromadb"
 
 
 

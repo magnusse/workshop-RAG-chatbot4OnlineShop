@@ -5,8 +5,10 @@ from chromadb import PersistentClient
 
 
 # Pfade
-DATA_PATH = "../../data/raw/products.json"
-DB_DIR = "../../vectorstore/chromadb"
+# DATA_PATH = "../../data/raw/products.json"
+DATA_PATH = "data/raw/products.json"
+#DB_DIR = "../../vectorstore/chromadb"
+DB_DIR = "vectorstore/chromadb"
 COLLECTION_NAME = "products"
 EMBEDDING_MODEL_NAME = "all-MiniLM-L12-v2"
 

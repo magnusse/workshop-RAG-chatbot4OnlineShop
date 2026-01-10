@@ -24,7 +24,7 @@ def respond(message, history):
         return "Fatal error in Chatbot"
 
 gr.ChatInterface(
-        fn=respond,
-        type="messages"
+        fn=respond
+ #       type="messages"
 ).launch()
 
