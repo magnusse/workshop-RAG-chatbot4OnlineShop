@@ -1,4 +1,5 @@
 import json
+import chromadb
 
 from chromadb.utils import embedding_functions
 from chromadb import PersistentClient
