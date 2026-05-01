@@ -9,7 +9,9 @@
       "EcoClean Accessory Kit A"
     ],
     "price": "129.00 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P002",
@@ -21,7 +23,9 @@
       "Turbo Brush Pro"
     ],
     "price": "159.00 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P003",
@@ -30,16 +34,20 @@
     "description": "The AquaFresh W100 is a modern cordless kettle designed for everyday kitchen use, featuring a generous 1.7-liter capacity that makes it suitable for families, offices, or frequent tea and coffee preparation. Its automatic shut-off system provides an additional layer of safety, preventing overheating and reducing energy consumption. Constructed from BPA-free materials, the kettle ensures safe and clean drinking water while maintaining durability and ease of use. Its 360-degree base and quick-boil heating element further enhance the user experience, offering both versatility and convenience.",
     "compatibility": [],
     "price": "39.99 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P004",
     "name": "AquaFresh W200",
     "category": "Kettle",
-    "description": "The AquaFresh W200 is an elegant stainless steel kettle equipped with adjustable temperature settings ranging from 60 to 100 \u00b0C, allowing users to prepare beverages such as green tea, herbal infusions, and coffee at their optimal brewing temperatures. Its integrated keep-warm function maintains the selected temperature for extended periods, ensuring hot water is always ready when needed. The robust stainless steel body enhances durability while offering a clean and modern aesthetic. Designed for comfort and efficiency, the W200 provides a refined boiling experience for users with diverse preferences.",
+    "description": "The AquaFresh W200 is an elegant stainless steel kettle equipped with adjustable temperature settings ranging from 60 to 100 °C, allowing users to prepare beverages such as green tea, herbal infusions, and coffee at their optimal brewing temperatures. Its integrated keep-warm function maintains the selected temperature for extended periods, ensuring hot water is always ready when needed. The robust stainless steel body enhances durability while offering a clean and modern aesthetic. Designed for comfort and efficiency, the W200 provides a refined boiling experience for users with diverse preferences.",
     "compatibility": [],
     "price": "54.99 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P005",
@@ -50,7 +58,9 @@
       "B-Series Replacement Jar"
     ],
     "price": "49.99 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P006",
@@ -62,18 +72,22 @@
       "XL Container"
     ],
     "price": "89.00 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P007",
     "name": "FreshAir P300",
     "category": "Air Purifier",
-    "description": "The FreshAir P300 is a high-efficiency air purifier featuring a triple-layer filtration system composed of a HEPA filter, activated carbon filter, and pre-filter. This combination effectively removes dust, pollen, odors, and harmful particles from the air, making it ideal for rooms up to 40 m\u00b2. Its quiet operation ensures minimal disturbance during sleep, work, or relaxation, while the integrated air quality indicators provide constant feedback on indoor air conditions. Designed to improve overall well-being, the P300 delivers cleaner and healthier air for a wide range of environments.",
+    "description": "The FreshAir P300 is a high-efficiency air purifier featuring a triple-layer filtration system composed of a HEPA filter, activated carbon filter, and pre-filter. This combination effectively removes dust, pollen, odors, and harmful particles from the air, making it ideal for rooms up to 40 m². Its quiet operation ensures minimal disturbance during sleep, work, or relaxation, while the integrated air quality indicators provide constant feedback on indoor air conditions. Designed to improve overall well-being, the P300 delivers cleaner and healthier air for a wide range of environments.",
     "compatibility": [
       "P-Series HEPA Filter"
     ],
     "price": "149.00 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P008",
@@ -82,7 +96,9 @@
     "description": "The FreshAir Mini P100 is a compact and portable air purifier tailored for small rooms, offices, and travel use. Its whisper-quiet performance makes it suitable for nighttime operation, while the USB power connection offers flexibility for use with power banks, laptops, or car adapters. Despite its small size, the P100 effectively reduces airborne contaminants and helps create a more comfortable breathing environment. Its minimalist design and low maintenance requirements make it a convenient companion for users on the go.",
     "compatibility": [],
     "price": "59.99 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P009",
@@ -91,7 +107,9 @@
     "description": "The CookMaster M400 is a compact microwave oven equipped with an integrated grill function, offering versatility for reheating, cooking, and browning food. Its 20-liter interior provides sufficient space for everyday dishes while maintaining a small footprint suitable for kitchens of any size. With an 800-watt output, the M400 ensures even heating and reliable performance. Its user-friendly controls make it easy to operate, allowing users to prepare a wide variety of meals quickly and efficiently.",
     "compatibility": [],
     "price": "119.00 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P010",
@@ -100,7 +118,9 @@
     "description": "The CookMaster M500 Plus is a digital microwave featuring a precise defrosting function, a convenient child safety lock, and a bright LED display for easy operation. Its modern control interface allows users to select tailored cooking programs and adjust settings quickly. The appliance offers consistent heating results, making it suitable for everyday kitchen tasks such as reheating leftovers, cooking vegetables, and preparing ready-made meals. Its modern design and thoughtful safety features make it a reliable addition to any household.",
     "compatibility": [],
     "price": "139.00 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P011",
@@ -111,7 +131,9 @@
       "D-Series Descaler"
     ],
     "price": "44.99 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P012",
@@ -123,16 +145,20 @@
       "S300 Descaler"
     ],
     "price": "159.00 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P013",
     "name": "CoolBreeze V200",
     "category": "Fan",
-    "description": "The CoolBreeze V200 is a compact table fan designed to deliver efficient and refreshing airflow across different room sizes. Equipped with three adjustable speed settings and an oscillation mode, it distributes air evenly and enhances comfort during warm weather. Its quiet motor ensures minimal noise, making it suitable for workspaces, bedrooms, or study areas. The fan\u2019s lightweight construction and stable base make it both practical and easy to reposition when needed.",
+    "description": "The CoolBreeze V200 is a compact table fan designed to deliver efficient and refreshing airflow across different room sizes. Equipped with three adjustable speed settings and an oscillation mode, it distributes air evenly and enhances comfort during warm weather. Its quiet motor ensures minimal noise, making it suitable for workspaces, bedrooms, or study areas. The fan's lightweight construction and stable base make it both practical and easy to reposition when needed.",
     "compatibility": [],
     "price": "29.99 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P014",
@@ -143,7 +169,9 @@
       "T-Series Remote Control"
     ],
     "price": "79.99 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P015",
@@ -154,7 +182,9 @@
       "R-Series Replacement Blade"
     ],
     "price": "59.00 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P016",
@@ -165,7 +195,9 @@
       "H-Series Nozzle Attachment"
     ],
     "price": "69.00 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P017",
@@ -176,7 +208,9 @@
       "F-Series Microfiber Pads"
     ],
     "price": "89.00 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P018",
@@ -185,7 +219,9 @@
     "description": "The SmartScale S100 is a precise digital kitchen scale designed for everyday cooking and baking. With a maximum load of up to 5 kg, it accommodates a wide variety of ingredients, from small quantities of spices to larger batches of dough. Its intuitive tare function allows users to measure ingredients in sequence without manually recalculating weights. The easy-to-read LCD display and compact construction make the S100 a practical tool for both novice and experienced cooks.",
     "compatibility": [],
     "price": "19.99 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P019",
@@ -196,7 +232,9 @@
       "T-Series Trash Bags"
     ],
     "price": "69.99 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   },
   {
     "id": "P020",
@@ -205,6 +243,8 @@
     "description": "The FreshToast T100 is a versatile 2-slice toaster equipped with adjustable browning levels, allowing users to prepare toast exactly to their preference. The included bun rack provides additional flexibility for heating rolls, croissants, or pastries. Its even-heating elements ensure consistent results, while the removable crumb tray simplifies cleaning after each use. With its compact footprint and reliable performance, the T100 is a practical addition to any kitchen.",
     "compatibility": [],
     "price": "34.99 EUR",
-    "source": "Manufacturer"
+    "source": "Manufacturer",
+    "upddate": "2026-05-01",
+    "delflag": false
   }
 ]

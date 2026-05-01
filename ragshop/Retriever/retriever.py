@@ -4,6 +4,7 @@ from sentence_transformers import SentenceTransformer
 from ragshop.Retriever.preprocessing import COLLECTION_NAME
 from ragshop.Retriever.preprocessing import EMBEDDING_MODEL_NAME
 from abc import ABC, abstractmethod
+from datetime import datetime, timedelta
 
 # Einstellungen
 DB_DIR = "vectorstore/chromadb"
@@ -42,10 +43,18 @@ class productretriever(IProductRetriever):
         # Ganz wichtig: Aus der Frage des Users muss mit dem gleichen Embedding Modell wie bei der VektorDB die Frage embedded werden
         embedding = self.__embedding_model.encode(prompt)
 
+        cutoff = int((datetime.now() - timedelta(days=365)).timestamp())
+
         # Jetzt damit die Anfrage in der VektorDB stellen. Bei CromaDB könnte man hier auch mehrere Query embeddings übergeben
         results = self.__collection.query(
             query_embeddings=[embedding],  # Muss eine Liste sein!
-            n_results=hits
+            n_results=hits,
+            where={
+                "$and": [
+                    {"delflag": {"$eq": False}},
+                    {"upddate": {"$gt": cutoff}}
+                ]
+            }
         )
 
         # Wir ziehen die Ergebnisse raus und concatenieren sie zu einem Text

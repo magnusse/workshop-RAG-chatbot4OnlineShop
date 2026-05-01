@@ -21,7 +21,8 @@ def respond(message, history):
         return result
 
     except Exception as e:
-        return "Fatal error in Chatbot"
+        print(f"ERROR in Chatbot: {e}")
+        return f"Fatal error in Chatbot: {e}"
 
 gr.ChatInterface(
         fn=respond

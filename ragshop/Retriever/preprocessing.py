@@ -1,5 +1,6 @@
 import json
 import chromadb.utils
+from datetime import datetime
 
 from chromadb.utils import embedding_functions
 from chromadb import PersistentClient
@@ -28,7 +29,14 @@ def chunk_products(products):
         chunks.append({
             "id": product["id"],
             "text": text,
-            "metadata": {"category": product["category"], "name": product["name"]}
+            "metadata": {
+                "category": product["category"],
+                "name": product["name"],
+                "price": product["price"],
+                "source": product["source"],
+                "upddate": int(datetime.strptime(product["upddate"], "%Y-%m-%d").timestamp()),
+                "delflag": product["delflag"]
+            }
         })
     return chunks
 

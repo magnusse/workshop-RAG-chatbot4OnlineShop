@@ -1,7 +1,7 @@
 import json
 import os
-from dotenv import load_dotenv
-load_dotenv()
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
 
 #from ragshop.Retriever import retriever
 from ragshop.Chatbot.CustomLLM import WPSCustomLLM
