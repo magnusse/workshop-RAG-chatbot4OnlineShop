@@ -3,7 +3,7 @@
     "configurations": [
         {
             "name": ""ragshop: Preprocessing"",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "module": "ragshop.Retriever.preprocessing",
             "cwd": "${workspaceFolder}",
@@ -12,7 +12,7 @@
         },
         {
             "name": "ragshop: UseInterface",
-            "type": "python",
+            "type": "debugpy",
             "request": "launch",
             "module": "ragshop.SalesConsultant.UseInterface",
             "cwd": "${workspaceFolder}",
