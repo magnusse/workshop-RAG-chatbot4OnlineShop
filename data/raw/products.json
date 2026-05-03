@@ -11,7 +11,8 @@
     "price": "129.00 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P002",
@@ -25,7 +26,8 @@
     "price": "159.00 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P003",
@@ -36,7 +38,8 @@
     "price": "39.99 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P004",
@@ -47,7 +50,8 @@
     "price": "54.99 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P005",
@@ -60,7 +64,8 @@
     "price": "49.99 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P006",
@@ -74,7 +79,8 @@
     "price": "89.00 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P007",
@@ -87,7 +93,8 @@
     "price": "149.00 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P008",
@@ -98,7 +105,8 @@
     "price": "59.99 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P009",
@@ -109,7 +117,8 @@
     "price": "119.00 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P010",
@@ -120,7 +129,8 @@
     "price": "139.00 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P011",
@@ -133,7 +143,8 @@
     "price": "44.99 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P012",
@@ -147,7 +158,8 @@
     "price": "159.00 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P013",
@@ -158,7 +170,8 @@
     "price": "29.99 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P014",
@@ -171,7 +184,8 @@
     "price": "79.99 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P015",
@@ -184,7 +198,8 @@
     "price": "59.00 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P016",
@@ -197,7 +212,8 @@
     "price": "69.00 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P017",
@@ -210,7 +226,8 @@
     "price": "89.00 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P018",
@@ -221,7 +238,8 @@
     "price": "19.99 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P019",
@@ -234,7 +252,8 @@
     "price": "69.99 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   },
   {
     "id": "P020",
@@ -245,6 +264,7 @@
     "price": "34.99 EUR",
     "source": "Manufacturer",
     "upddate": "2026-05-01",
-    "delflag": false
+    "delflag": false,
+    "prodcatversion": "1.0"
   }
 ]

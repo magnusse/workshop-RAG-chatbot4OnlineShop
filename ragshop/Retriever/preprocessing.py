@@ -14,10 +14,12 @@ DB_DIR = "vectorstore/chromadb"
 COLLECTION_NAME = "products"
 EMBEDDING_MODEL_NAME = "all-MiniLM-L12-v2"
 
+
 # 1. Daten laden
 def load_products(filepath):
     with open(filepath, "r", encoding="utf-8") as f:
         return json.load(f)
+
 
 # 2. Chunking: Pro Produkt ein Chunk aus Name + Beschreibung + Kompatibilität
 def chunk_products(products):
@@ -35,51 +37,96 @@ def chunk_products(products):
                 "price": product["price"],
                 "source": product["source"],
                 "upddate": int(datetime.strptime(product["upddate"], "%Y-%m-%d").timestamp()),
-                "delflag": product["delflag"]
+                "delflag": product["delflag"],
+                "prodcatversion": product["prodcatversion"]
             }
         })
     return chunks
 
-# 3. Vektordatenbank mit Chroma initialisieren
-def setup_chroma(chunks, db_dir, embedding_model_name=EMBEDDING_MODEL_NAME, collection_name="products"):
-    texts = [chunk["text"] for chunk in chunks]
-    metadatas = [chunk["metadata"] for chunk in chunks]
-    ids = [chunk["id"] for chunk in chunks]
 
+def _get_embedding_fn(model_name=EMBEDDING_MODEL_NAME):
+    return embedding_functions.SentenceTransformerEmbeddingFunction(model_name=model_name)
+
+
+# 3a. Vektordatenbank komplett neu aufbauen (alle bestehenden Einträge werden gelöscht)
+def rebuild_vectorstore(products, db_dir=DB_DIR, embedding_model_name=EMBEDDING_MODEL_NAME, collection_name=COLLECTION_NAME):
     client = PersistentClient(path=db_dir)
 
-    embedding_fn = embedding_functions.SentenceTransformerEmbeddingFunction(model_name=embedding_model_name)
+    try:
+        client.delete_collection(name=collection_name)
+        print(f"Bestehende Collection '{collection_name}' gelöscht.")
+    except Exception:
+        pass
 
-    # Bestehende oder neue Collection
-    collection = client.get_or_create_collection(name=COLLECTION_NAME, embedding_function=embedding_fn)
-
-    # Daten hinzufügen
-    collection.add(
-        documents=texts,
-        ids=ids,
-        metadatas=metadatas
+    collection = client.create_collection(
+        name=collection_name,
+        embedding_function=_get_embedding_fn(embedding_model_name)
     )
 
-    # Persistieren
-    #client.persist()
+    chunks = chunk_products(products)
+    collection.add(
+        documents=[c["text"] for c in chunks],
+        ids=[c["id"] for c in chunks],
+        metadatas=[c["metadata"] for c in chunks]
+    )
 
-    # Anzahl Einträge prüfen
-    print("Entries in Collection:", len(collection.get()["ids"]))
+    print(f"✅ Rebuild abgeschlossen. Einträge in Collection: {len(collection.get()['ids'])}")
     return collection
+
+
+# 3b. Nur geänderte Einträge aktualisieren (Vergleich per prodcatversion)
+def update_vectorstore(products, db_dir=DB_DIR, embedding_model_name=EMBEDDING_MODEL_NAME, collection_name=COLLECTION_NAME):
+    client = PersistentClient(path=db_dir)
+    collection = client.get_or_create_collection(
+        name=collection_name,
+        embedding_function=_get_embedding_fn(embedding_model_name)
+    )
+
+    # Bestehende Versionen aus ChromaDB laden
+    existing = collection.get(include=["metadatas"])
+    existing_versions = {
+        eid: meta.get("prodcatversion")
+        for eid, meta in zip(existing["ids"], existing["metadatas"])
+    }
+
+    # Nur Produkte mit geänderter oder fehlender Version selektieren
+    changed = [
+        p for p in products
+        if p["id"] not in existing_versions
+        or existing_versions[p["id"]] != p["prodcatversion"]
+    ]
+
+    if not changed:
+        print("ℹ️ Keine Änderungen gefunden. VektorDB ist aktuell.")
+        return collection
+
+    chunks = chunk_products(changed)
+    collection.upsert(
+        documents=[c["text"] for c in chunks],
+        ids=[c["id"] for c in chunks],
+        metadatas=[c["metadata"] for c in chunks]
+    )
+
+    print(f"✅ Update abgeschlossen. {len(changed)} Einträge aktualisiert. Gesamt: {len(collection.get()['ids'])}")
+    return collection
+
 
 # Hauptfunktion
 def main():
-    print("Load Products...")
+    import sys
+    mode = sys.argv[1] if len(sys.argv) > 1 else "rebuild"
+
+    print("Lade Produkte...")
     products = load_products(DATA_PATH)
-    print(f"{len(products)} Products loaded.")
+    print(f"{len(products)} Produkte geladen.")
 
-    print("Chunking of products...")
-    chunks = chunk_products(products)
+    if mode == "update":
+        print("Starte inkrementelles Update...")
+        update_vectorstore(products)
+    else:
+        print("Starte vollständigen Rebuild...")
+        rebuild_vectorstore(products)
 
-    print("Save chunks in ChromaDB...")
-    setup_chroma(chunks, DB_DIR)
-
-    print("✅ Done: ChromaDB is ready for Retrieval.")
 
 if __name__ == "__main__":
     main()
