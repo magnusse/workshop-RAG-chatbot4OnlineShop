@@ -33,50 +33,66 @@ class mock_salesconsultant(ISalesConsultant):
 #
 class salesconsultant(ISalesConsultant):
 
+    SYSTEM_PROMPT = (
+        "You are a friendly salesperson for household appliances. "
+        "Answer the user's questions using only the product information provided "
+        "in each user turn. If the information is insufficient, say so politely."
+    )
+
+    REWRITE_SYSTEM_PROMPT = (
+        "Given the conversation history and a follow-up question, rewrite the "
+        "follow-up into a standalone question that can be understood without the "
+        "history. Keep it concise. Output ONLY the rewritten question, nothing else."
+    )
+
     def __init__(self, retriever:IProductRetriever):
         self.retriever = retriever
         token = os.getenv("WEBUI_API_KEY")
         # TODO Integrate Abstraction
         self.llm = WPSCustomLLM(api_key=token)
+        # Clean Q/A history (no retrieved doc chunks) — kept lean across turns.
+        self.history: list[dict] = []
 
-    def ask_qa_chain(self,prompt):
+    def _extract_content(self, raw_result) -> str:
+        response = json.loads(raw_result) if isinstance(raw_result, str) else raw_result
+        return response["choices"][0]["message"]["content"]
 
-# Wir ziehen die Ergebnisse raus und concatenieren sie zu einem Text
-        context = self.retriever.retrievecontent(prompt,3)
+    def _rewrite_query(self, prompt: str) -> str:
+        """Turn a follow-up question into a standalone query for the retriever.--> history-aware retriever"""
+        if not self.history:
+            return prompt
+        rewrite_messages = [
+            {"role": "system", "content": self.REWRITE_SYSTEM_PROMPT},
+            *self.history,
+            {"role": "user", "content": f"Follow-up question: {prompt}\n\nStandalone question:"},
+        ]
+        rewritten = self._extract_content(self.llm.call(rewrite_messages)).strip()
+        print(f"Rewritten query for retriever: {rewritten}")
+        return rewritten
 
-# Nun erzeugen wir einen Prompt und fügen die Ergebnisse aus der Vektordatenbank hinzu
-        llm_prompt = "You are a friendly salesperson for household appliances. Please answer the following question: \"" + prompt + "\" and use only the information from the following text passages for this purpose." + context
-        print("LLM-Prompt = \n"+llm_prompt)
-        result = self.llm.call(llm_prompt)
+    def ask_qa_chain(self, prompt):
+        standalone_query = self._rewrite_query(prompt)
+        context = self.retriever.retrievecontent(standalone_query, 3)
 
-        response = json.loads(result) if isinstance(result, str) else result
-        answer = response["choices"][0]["message"]["content"]
+        user_turn = (
+            f"Question: {prompt}\n\n"
+            f"Use only the following product information to answer:\n{context}"
+        )
+        messages = [
+            {"role": "system", "content": self.SYSTEM_PROMPT},
+            *self.history,
+            {"role": "user", "content": user_turn},
+        ]
+        print("LLM messages =\n" + json.dumps(messages, ensure_ascii=False, indent=2))
+
+        answer = self._extract_content(self.llm.call(messages))
+
+        # Persist only the clean user question + answer, not the retrieved chunks,
+        # so the history stays small over many turns.
+        self.history.append({"role": "user", "content": prompt})
+        self.history.append({"role": "assistant", "content": answer})
 
         return answer
 
-#-------------------------------------------
-
-def chat():
-    print("🛍️ Welcome to the sales consultance chatbot. For exit type 'exit':\n")
-    # collection = load_vectorstore()
-    myChatbot = salesconsultant()
-
-    while True:
-        query = input("Du: ")
-        if query.lower() in ("exit", "quit"):
-            break
-        result = myChatbot.ask_qa_chain(query)
-        response = json.loads(result)
-
-        print("\nAntwort:")
-        print(response["choices"][0]["message"]["content"])
-        # print(result)
-
-        print("\n---\n")
-
-if __name__ == "__main__":
-    if not os.getenv("WEBUI_API_KEY"):
-        print("❌ Please set environment WEBUI_API_KEY.")
-    else:
-        token = os.getenv("WEBUI_API_KEY")
-        chat()
+    def reset_history(self) -> None:
+        self.history = []

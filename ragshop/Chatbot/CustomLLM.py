@@ -17,27 +17,26 @@ class WPSCustomLLM:
         self.api_key = api_key
 
     def call(self,
-        prompt: str,
+        messages: List[dict],
         stop: Optional[List[str]] = None
     ) -> str:
-        """Run the LLM on the given input.
+        """Run the LLM on the given chat messages.
 
         Using WPS- Custom LLMs on https://gpt.wps.de/api/chat/completions
 
         Args:
-            prompt: The prompt to generate from.
+            messages: A list of OpenAI-style chat messages, each dict with
+                "role" (system/user/assistant) and "content" (str).
             stop: Stop words to use when generating. Model output is cut off at the
                 first occurrence of any of the stop substrings.
                 If stop tokens are not supported consider raising NotImplementedError.
 
         Returns:
-            The model output as a string. Actual completions SHOULD NOT include the prompt.
+            The raw response body from the API as a string (JSON).
         """
 
-        print("prompt= "+prompt)
         if stop is not None:
             raise ValueError("stop kwargs are not permitted.")
-#        return prompt[: self.n]
 
         url = 'https://gpt.wps.de/api/chat/completions'
         headers = {
@@ -46,12 +45,7 @@ class WPSCustomLLM:
         }
         data = {
             "model": MODEL_NAME,
-            "messages": [
-                {
-                    "role": "user",
-                    "content": f"{prompt}"
-                }
-            ]
+            "messages": messages,
         }
         response = requests.post(url, headers=headers, json=data)
         return response.text
