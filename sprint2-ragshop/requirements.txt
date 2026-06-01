@@ -1,0 +1,5 @@
+gradio
+Requests==2.32.5
+keyring>=24
+python-dotenv
+pytest
