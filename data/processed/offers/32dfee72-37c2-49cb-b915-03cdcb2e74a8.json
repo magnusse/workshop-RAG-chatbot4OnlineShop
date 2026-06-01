@@ -1,0 +1,13 @@
+{
+  "id": "32dfee72-37c2-49cb-b915-03cdcb2e74a8",
+  "customer_id": "guest",
+  "created_at": "2026-06-01T19:26:30.486200",
+  "lines": [
+    {
+      "product_id": "P004",
+      "name": "AquaFresh W200",
+      "quantity": 1,
+      "price": "54.99 EUR"
+    }
+  ]
+}

@@ -7,7 +7,9 @@ from ragshop.sales_consultance.domain.model.customer import CustomerId
 
 def launch() -> None:
     load_dotenv(find_dotenv())
-    app = build_application(bootstrap_pkb=False)
+    # bootstrap=True is idempotent: it upserts every product from products.json
+    # into the PKB on every launch, so the store always reflects the master data.
+    app = build_application(bootstrap_pkb=True)
 
     # One conversation per process — fine for the workshop demo. A multi-user
     # deployment would use gr.State to keep a conversation per session.

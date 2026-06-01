@@ -2,7 +2,6 @@
 concrete adapter belongs to which port. Every bounded context is wired
 together here. Replace adapters with fakes for tests."""
 
-import os
 from dataclasses import dataclass
 
 from ragshop.order_management.offer_store import JsonOfferStore
@@ -18,6 +17,7 @@ from ragshop.sales_consultance.application.api import SalesConsultantApi
 from ragshop.sales_consultance.application.sales_consultant_service import (
     SalesConsultantService,
 )
+from ragshop.sales_consultance.infrastructure.api_key_provider import get_wps_api_key
 from ragshop.sales_consultance.infrastructure.chroma_product_knowledge_adapter import (
     ChromaProductKnowledgeAdapter,
 )
@@ -45,12 +45,8 @@ class Ragshop:
 
 
 def build_application(bootstrap_pkb: bool = True) -> Ragshop:
-    api_key = os.getenv("WEBUI_API_KEY")
-    if not api_key:
-        raise EnvironmentError("WEBUI_API_KEY environment variable is not set")
-
     # --- Sales Consultance outbound adapters -------------------------------
-    llm = WpsLLMAdapter(api_key=api_key)
+    llm = WpsLLMAdapter(api_key=get_wps_api_key())
     product_knowledge = ChromaProductKnowledgeAdapter()
     conversations = InMemoryConversationRepository()
 

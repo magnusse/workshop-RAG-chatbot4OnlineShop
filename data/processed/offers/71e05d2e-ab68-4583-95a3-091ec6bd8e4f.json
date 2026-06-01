@@ -1,0 +1,13 @@
+{
+  "id": "71e05d2e-ab68-4583-95a3-091ec6bd8e4f",
+  "customer_id": "guest",
+  "created_at": "2026-06-01T19:22:07.328817",
+  "lines": [
+    {
+      "product_id": "P001",
+      "name": "EcoClean X200",
+      "quantity": 1,
+      "price": "129.00 EUR"
+    }
+  ]
+}
