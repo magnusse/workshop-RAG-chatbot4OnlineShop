@@ -104,6 +104,21 @@ Die Gradio-Oberfläche ist anschließend unter **http://localhost:7860** erreich
 | LLM        | Mistral Medium Latest (WPS API)  |
 | Embeddings | all-MiniLM-L12-v2 (HuggingFace)  |
 
+
+## Andere mögliche LLM Modelle 
+
+Reihenfolge der leistungsfähigkeit
+ 
+| Rang | Modell                          | Kosten             | Leistung | Typische Verwendung |
+|---|------------------------------------|--------------------|--------|--------|
+| 1 | gpt-5-mini                         | Günstig            | Gut            | Standard-Chat, Agenten, Automatisierung |
+| 2 | Mistral.mistral-medium-latest      | Günstig bis mittel | Gut            | Allgemeine Aufgaben |
+| 3 | IONOS.openai/gpt-oss-120b          | Mittel             | Gut bis sehr gut | Open-Source-Modell für allgemeine Aufgaben |
+| 4 | Mistral.magistral-medium-latest    | Mittel             | Sehr gut       | Reasoning, komplexe Analysen |
+| 5 | Mistral.mistral-large-latest       | Teurer             | Sehr gut       | Anspruchsvolle Text- und Wissensaufgaben |
+| 6 | gpt-5.4                            | Am teuersten       | Beste Qualität | Komplexes Reasoning, Coding, Agenten |
+
+
 ---
 
 ## Workshop-Stufen
